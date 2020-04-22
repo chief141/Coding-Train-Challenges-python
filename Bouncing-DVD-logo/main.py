@@ -6,7 +6,6 @@ fps = 60
 
 #for display
 pygame.init()
-pygame.mixer.init()
 screen=pygame.display.set_mode((width,height))
 pygame.display.set_caption("Bouncing DVD logo")
 clock=pygame.time.Clock()
