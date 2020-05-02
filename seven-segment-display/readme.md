@@ -1,3 +1,3 @@
 ## Display
 
-![preview](/pic/seven-segment-preview.jpg)
+![preview](/pics/seven-segment-preview.jpg)
