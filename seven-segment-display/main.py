@@ -14,7 +14,6 @@ bar_img_deactive_vertical = pygame.transform.rotate(bar_img_deactive_horizontal,
 
 #for display
 pygame.init()
-pygame.mixer.init()
 screen=pygame.display.set_mode((width,height))
 pygame.display.set_caption("Display")
 clock=pygame.time.Clock()
