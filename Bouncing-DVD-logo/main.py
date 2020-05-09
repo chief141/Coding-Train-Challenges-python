@@ -1,4 +1,5 @@
 import pygame
+from random import choice
 
 width=800
 height=600
@@ -19,27 +20,26 @@ class Logo(pygame.sprite.Sprite):
 		self.image = pygame.transform.scale(dvd_image, (68,38))
 		self.rect = self.image.get_rect()
 		self.image.set_colorkey((0,0,0))
-		self.speedx = 120
-		self.speedy = 120
+		self.speedx = choice([-120,120])
+		self.speedy = choice([-120,120])
 		self.last_x_changed = pygame.time.get_ticks()
 		self.last_y_changed = pygame.time.get_ticks()
+		self.rect.center = (width/2, height/2)
 
 	def get_delta_time(self,delta_time):
 			self.delta_time = delta_time
 
 	def update(self):
 		if self.rect.right > width or self.rect.left < 0 :
-			if pygame.time.get_ticks() - self.last_x_changed >= 1000 : 
+			if pygame.time.get_ticks() - self.last_x_changed >= 1000 :
 				self.speedx = self.speedx * (-1)
 				self.last_x_changed = pygame.time.get_ticks()
 
-
-
 		if self.rect.bottom > height or self.rect.top < 0 :
-			if pygame.time.get_ticks() - self.last_y_changed >= 1000 : 
+			if pygame.time.get_ticks() - self.last_y_changed >= 1000 :
 				self.speedy = self.speedy * (-1)
 				self.last_y_changed = pygame.time.get_ticks()
- 
+
 		self.rect.centerx += self.speedx * self.delta_time
 		self.rect.centery += self.speedy * self.delta_time
 
