@@ -15,7 +15,6 @@ red = (255,28,28)
 
 #for display
 pygame.init()
-pygame.mixer.init()
 screen=pygame.display.set_mode((width,height),pygame.RESIZABLE)
 pygame.display.set_caption("VISUALIZiING PI")
 clock=pygame.time.Clock()
