@@ -34,8 +34,8 @@ class Ball(pygame.sprite.Sprite):
 		self.image.set_colorkey(black)
 		self.rect = self.image.get_rect()
 		self.rect.center = (width//2, height//2)
-		self.speedx = choice([-7,-6,-5,5,6,7])
-		self.speedy = choice([-7,-6,-5,5,6,7])
+		self.speedx = choice([-6,-5,5,6])
+		self.speedy = choice([-6,-5,5,6])
 		self.last_hit =  0
 		self.create_new_self =False
 		self.first = True
@@ -124,7 +124,7 @@ run=True
 while run:
 	#clock spped
 	clock.tick(fps)
-	
+
 	#input(events)
 	for event in pygame.event.get():
 		if event.type==pygame.QUIT:
