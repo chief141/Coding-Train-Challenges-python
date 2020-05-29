@@ -15,7 +15,7 @@ colors = [(240,0,0), (240,240,0), (135,206,210)]
 #for display
 pygame.init()
 screen=pygame.display.set_mode((width,height))
-pygame.display.set_caption("My game")
+pygame.display.set_caption("fireworks")
 clock=pygame.time.Clock()
 
 vec = pygame.math.Vector2
