@@ -44,9 +44,9 @@ class Bar(pygame.sprite.Sprite):
 #sprite groups
 all_sprite = pygame.sprite.Group()
 
-bar = Bar(width//2, 30, True)
-bar1 = Bar(width//2,height//2, True)
-bar2 = Bar(width//2, height - 30, True)
+bar = Bar(width//2, 30, True, "horizontal")
+bar1 = Bar(width//2,height//2, True, "horizontal")
+bar2 = Bar(width//2, height - 30, True, "horizontal")
 
 bar3 = Bar(160, 60, True, "vertical")
 bar4  = Bar(370, 60, True, "vertical")
@@ -77,7 +77,7 @@ last_time_changed = pygame.time.get_ticks()
 while run:
 	#clock spped
 	clock.tick(fps)
-	
+
 	#input(events)
 	for event in pygame.event.get():
 		if event.type==pygame.QUIT:
@@ -86,7 +86,7 @@ while run:
 	#update
 	if pygame.time.get_ticks() - last_time_changed >= 1000:
 		last_time_changed = pygame.time.get_ticks()
-		if current_no == 9 : current_no =  0 
+		if current_no == 9 : current_no =  0
 		else : current_no += 1
 
 	i = 0
